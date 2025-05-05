@@ -52,7 +52,7 @@ export default function Home() {
       <img src={bookiLogo} alt="Booki" />
     </a>
 
-    <a href="https://github.com/FoligneTheo/Kasa" target="_blank" rel="noreferrer" className="project-card image-card">
+    <a href="https://react1-wuik.vercel.app/" target="_blank" rel="noreferrer" className="project-card image-card">
       <img src={kasaLogo} alt="Kasa" />
     </a>
 
