@@ -2,9 +2,8 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { FiMail as MailIcon } from 'react-icons/fi';
 import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon } from 'react-icons/fa';
-import thorusLogo from '../assets/thorusicon.png';
-import bookiLogo from '../assets/bookiicon.png';
-import kasaLogo from '../assets/kasaicon.png';
+import ProjectsSection from '../components/ProjectsSection';
+import About from '../components/About.js';
 
 export default function Home() {
   const form = useRef();
@@ -39,30 +38,9 @@ export default function Home() {
         <div class="scroll-down5"></div>
       </section>
 
-      <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis un développeur.</p>
-      </section>
+<About />
 
-<section id="projects" className="projects-section">
-  <h2>Mes projets</h2>
-  <div className="project-cards">
-
-    <a href="https://folignetheo.github.io/BookiV3/" target="_blank" rel="noreferrer" className="project-card image-card">
-      <img src={bookiLogo} alt="Booki" />
-    </a>
-
-    <a href="https://react1-wuik.vercel.app/" target="_blank" rel="noreferrer" className="project-card image-card">
-      <img src={kasaLogo} alt="Kasa" />
-    </a>
-
-    <a href="https://thorus.fr/" target="_blank" rel="noreferrer" className="project-card image-card">
-      <img src={thorusLogo} alt="Thorus" />
-    </a>
-
-  </div>
-</section>
-
+<ProjectsSection />
 
       <section id="contact" className="contact-icons">
         <h2>Contact</h2>
