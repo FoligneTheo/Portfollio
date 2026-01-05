@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.scss';
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <section id="about">
       <div className="about-text">
@@ -19,4 +19,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+};
+
+export default About;

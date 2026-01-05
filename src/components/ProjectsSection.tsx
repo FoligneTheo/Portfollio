@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import bookiLogo from '../assets/bookiicon.png';
 import kasaLogo from '../assets/kasaicon.png';
 
-export default function ProjectsSection() {
+const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="projects-section">
       <h2>Mes projets</h2>
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
           link="https://folignetheo.github.io/BookiV3/"
           image={bookiLogo}
           alt="Booki"
-          description="Site vitrine d’agence de voyage, réalisé en HTML & CSS."
+          description="Site vitrine d'agence de voyage, réalisé en HTML & CSS."
         />
         <ProjectCard
           link="https://react1-wuik.vercel.app/"
@@ -24,4 +24,6 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-}
+};
+
+export default ProjectsSection;

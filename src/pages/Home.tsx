@@ -1,15 +1,19 @@
-import { useRef } from 'react';
+import React, { useRef, FormEvent } from 'react';
 import emailjs from 'emailjs-com';
 import { FiMail as MailIcon } from 'react-icons/fi';
 import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon } from 'react-icons/fa';
 import ProjectsSection from '../components/ProjectsSection';
-import About from '../components/About.js';
+import About from '../components/About';
 
-export default function Home() {
-  const form = useRef();
+const Home: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+
+    if (!form.current) {
+      return;
+    }
 
     emailjs.sendForm(
       'service_49s86ki',
@@ -20,27 +24,28 @@ export default function Home() {
       (result) => {
         console.log(result.text);
         alert('Message envoyé avec succès !');
-        form.current.reset();
+        if (form.current) {
+          form.current.reset();
+        }
       },
       (error) => {
         console.error(error.text);
-        alert('Erreur lors de l’envoi...');
+        alert('Erreur lors de l'envoi...');
       }
     );
   };
 
   return (
     <div className="home">
-
       <section id="hero" className="hero">
         <h1>Bienvenue</h1>
         <p>Je suis Théo Foligné.</p>
-        <div class="scroll-down5"></div>
+        <div className="scroll-down5"></div>
       </section>
 
-<About />
+      <About />
 
-<ProjectsSection />
+      <ProjectsSection />
 
       <section id="contact" className="contact-icons">
         <h2>Contact</h2>
@@ -70,14 +75,13 @@ export default function Home() {
           </label>
           <label>
             Message :
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="message" rows={5} required></textarea>
           </label>
           <button type="submit">Envoyer</button>
         </form>
       </section>
-
     </div>
   );
+};
 
-
-}
+export default Home;

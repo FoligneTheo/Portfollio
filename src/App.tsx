@@ -1,10 +1,13 @@
+import React from 'react';
 import Home from './pages/Home';
 import './styles/main.scss';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <main>
       <Home />
     </main>
   );
-}
+};
+
+export default App;
