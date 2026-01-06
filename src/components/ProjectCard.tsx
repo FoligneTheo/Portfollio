@@ -10,12 +10,15 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ link, image, alt, description }) => {
   return (
-    <div className="project-card image-card">
-      <a href={link} target="_blank" rel="noreferrer">
-        <img src={image} alt={alt} />
-      </a>
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="project-card image-card"
+    >
+      <img src={image} alt={alt} />
       <p className="project-description">{description}</p>
-    </div>
+    </a>
   );
 };
 
