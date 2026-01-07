@@ -30,7 +30,7 @@ const Home: React.FC = () => {
       },
       (error) => {
         console.error(error.text);
-        alert('Erreur lors de l'envoi...');
+        alert('Erreur lors de l\'envoi...');
       }
     );
   };
@@ -51,13 +51,13 @@ const Home: React.FC = () => {
         <h2>Contact</h2>
         <div className="icons">
           <a href="mailto:halodino@hotmail.fr" target="_blank" rel="noreferrer" aria-label="Email">
-            <i className="icon"><MailIcon /></i>
+            <span className="icon"><MailIcon /></span>
           </a>
           <a href="https://www.linkedin.com/in/th%C3%A9o-folign%C3%A9-1b6124271/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i className="icon"><LinkedinIcon /></i>
+            <span className="icon"><LinkedinIcon /></span>
           </a>
           <a href="https://github.com/FoligneTheo" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i className="icon"><GithubIcon /></i>
+            <span className="icon"><GithubIcon /></span>
           </a>
         </div>
       </section>
