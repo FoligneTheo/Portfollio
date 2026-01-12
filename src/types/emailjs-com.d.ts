@@ -18,3 +18,4 @@ declare module 'emailjs-com' {
     publicKey?: string
   ): Promise<EmailJSResponse>;
 }
+

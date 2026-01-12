@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 
 import bookiLogo from '../assets/bookiicon.png';
 import kasaLogo from '../assets/kasaicon.png';
+import lightrevLogo from '../assets/lightrevicon.png';
 
 const ProjectsSection: React.FC = () => {
   return (
@@ -21,9 +22,16 @@ const ProjectsSection: React.FC = () => {
           alt="Kasa"
           description="Application de location entre particuliers, réalisé avec React."
         />
+        <ProjectCard
+          link="https://react1-wuik.vercel.app/"
+          image={lightrevLogo}
+          alt="Lightrev"
+          description="Plateforme de partage et de reviews."
+        />
       </div>
     </section>
   );
 };
 
 export default ProjectsSection;
+
